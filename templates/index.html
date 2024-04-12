@@ -3,12 +3,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>My Flask Website</title>
+        <title>My Flask to-do list</title>
         <link rel="stylesheet"
             href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <h1>Welcome to My Flask App</h1>
+        <h1>waiton to do list</h1>
         <p>This is a simple Flask application.</p>
+        <ul>
+            {% for task in tasks %}
+            <li>
+                {{ task.title }}
+                {% if not task.completed %}
+                [<a href="{{ url_for('complete_task', task_id=task.id) }}">Complete</a>]
+                {% else %}
+                    [<a>Completed</a>]
+                {% endif %}
+                [<a href="{{ url_for('delete_task', task_id=task.id) }}">Delete</a>]
+            </li>
+            {% endfor %}
+        </ul>
+    
+        <h2>Add New Task</h2>
+        <form action="{{ url_for('add_new_task') }}" method="post">
+            <input type="text" name="title" required>
+            <input type="submit" value="Add Task">
+        </form>
     </body>
 </html>

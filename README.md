@@ -8,9 +8,9 @@ a basic "To-Do List" web application where users can add tasks, mark them as don
 
 ### **Build the To-Do List Application**
 
-- [ ]  Develop a Flask application with functionalities to display tasks, add a new task, mark a task as completed, and delete a task.
-- [ ]  Write the application code and create HTML templates for the interface.
-- [ ]  Use Git to commit your changes and push them to GitHub.
+- [x]  Develop a Flask application with functionalities to display tasks, add a new task, mark a task as completed, and delete a task.
+- [x]  Write the application code and create HTML templates for the interface.
+- [x]  Use Git to commit your changes and push them to GitHub.
 
 ### **Implement Unit Tests**
 

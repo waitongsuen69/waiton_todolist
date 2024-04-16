@@ -36,5 +36,30 @@ describe('Task management test', () => {
     expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
 
   });
+  test('finish/not finish task test', () => {
+    render(<App />);
+    var first_check_box = screen.getAllByRole('checkbox')[0];
+    
+    // expect(first_check_box.checked).toBe(false);
+    var first_task = screen.getByText('Learn React');
+    expect(first_task).toHaveStyle('textDecoration: none');
+    expect(first_check_box.checked).toBeFalsy();
+
+    fireEvent.click(first_check_box);
+    
+    // expect(first_check_box.checked).toBe(true);
+    expect(first_check_box.checked).toBeTruthy();
+    var first_task = screen.getByText('Learn React');
+    expect(first_task).toHaveStyle('textDecoration: line-through');
+
+    var first_check_box = screen.getAllByRole('checkbox')[0];
+    fireEvent.click(first_check_box);
+
+    // expect(first_check_box.checked).toBe(false);
+    expect(first_check_box.checked).toBeFalsy();
+    var first_task = screen.getByText('Learn React');
+    expect(first_task).toHaveStyle('textDecoration: none');
+
+  });
 });
 

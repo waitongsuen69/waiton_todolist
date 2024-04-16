@@ -1,20 +1,20 @@
 # waiton_todolist
-a basic "To-Do List" web application where users can add tasks, mark them as done, and delete them. We'll use Python and Flask for simplicity, but the concepts apply to any language and framework.
+a basic "To-Do List" web application where users can add tasks, mark them as done, and delete them. We'll use React and js, but the concepts apply to any language and framework.
 
 ### **Set Up Your Development Environment**
 
-- [x]  Install Python and Flask.
+- [x]  Install react
 - [x]  Create a new GitHub repository and clone it to your local machine.
 
 ### **Build the To-Do List Application**
 
-- [x]  Develop a Flask application with functionalities to display tasks, add a new task, mark a task as completed, and delete a task.
+- [x]  Develop application with functionalities to display tasks, add a new task, mark a task as completed, and delete a task.
 - [x]  Write the application code and create HTML templates for the interface.
 - [x]  Use Git to commit your changes and push them to GitHub.
 
 ### **Implement Unit Tests**
 
-- [ ]  Write unit tests for your application using Python’s **`unittest`** library.
+- [ ]  Write unit tests for your application 
 - [ ]  Run your tests to ensure your application works as expected.
 
 ### **Containerize Your Application with Docker**

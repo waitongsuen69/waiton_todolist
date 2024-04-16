@@ -72,8 +72,8 @@ function App() {
       <h1>Task Manager</h1>
       {/* <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} /> */}
       <form onSubmit={(e) => e.preventDefault()}>
-        <input type='text' name='title' value={inputText} onChange={ e=> setInputText(e.target.value)}></input>
-        <input type='submit' onClick={()=>addTask(inputText)}></input>
+        <input type='text' name='title' value={inputText} onChange={ e=> setInputText(e.target.value)} placeholder='Add new task'></input>
+        <button type='submit' onClick={()=>addTask(inputText)}>Add</button>
       </form>
       <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
     </div>

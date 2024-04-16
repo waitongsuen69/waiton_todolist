@@ -14,8 +14,8 @@ a basic "To-Do List" web application where users can add tasks, mark them as don
 
 ### **Implement Unit Tests**
 
-- [ ]  Write unit tests for your application 
-- [ ]  Run your tests to ensure your application works as expected.
+- [x]  Write unit tests for your application 
+- [x]  Run your tests to ensure your application works as expected.
 
 ### **Containerize Your Application with Docker**
 

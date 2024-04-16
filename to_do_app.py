@@ -12,7 +12,13 @@ tasks = [
 # connect html page 
 @app.route('/')
 def index():
-    return render_template('index.html', tasks=tasks )
+    return render_template('index.html', tasks=tasks)
+
+@app.route('/get_tasks/<string:task_title>', methods=['GET'])
+def get_tasks():
+    for task in tasks:
+        if task['title'] == task_title:
+                return str(task)
 
 # add test function 
 @app.route('/add_new_task', methods=['POST'] )

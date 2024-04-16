@@ -7,11 +7,11 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-describe('App component', () => {
-  test('adds a new task when the Add Task button is clicked', () => {
+describe('Task management test', () => {
+  test('Add task test', () => {
     render(<App />);
     const inputElement = screen.getByPlaceholderText('Add new task');
-    const buttonElement = screen.getByText('Add');
+    var buttonElement = screen.getByText('Add');
 
     // Simulate user typing a new task into the input field
     fireEvent.change(inputElement, { target: { value: 'Add a testing task' } });
@@ -23,4 +23,18 @@ describe('App component', () => {
     const addedTask = screen.getByText('Add a testing task');
     expect(addedTask).toBeInTheDocument();
   });
+
+  test('delete task test', () => {
+    render(<App />);
+    expect(screen.getByText('Learn React')).toBeInTheDocument();
+    var buttonElement = screen.getAllByText('Delete')[0];
+
+    // Simulate clicking the 'Add Task' button
+    fireEvent.click(buttonElement);
+
+    // Check that the task is no longer in the document
+    expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
+
+  });
 });
+

@@ -19,8 +19,8 @@ a basic "To-Do List" web application where users can add tasks, mark them as don
 
 ### **Containerize Your Application with Docker**
 
-- [ ]  Create a **`Dockerfile`** for your application.
-- [ ]  Build the Docker image and run your application inside a Docker container to ensure it works.
+- [x]  Create a **`Dockerfile`** for your application.
+- [x]  Build the Docker image and run your application inside a Docker container to ensure it works.
 
 ### **Set Up Continuous Integration**
 

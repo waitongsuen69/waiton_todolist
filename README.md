@@ -1,6 +1,13 @@
 # waiton_todolist
 a basic "To-Do List" web application where users can add tasks, mark them as done, and delete them. We'll use React and js, but the concepts apply to any language and framework.
 
+### to run in docker
+```
+cd PATH\to\waiton_todolist    
+docker build -t todolist:latest .   # build docker image and give tag todolist
+docker run -p 3000:3000 todolist:latest # run docker iamge in port 3000 
+```
+
 ### **Set Up Your Development Environment**
 
 - [x]  Install react

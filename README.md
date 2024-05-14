@@ -5,7 +5,7 @@ a basic "To-Do List" web application where users can add tasks, mark them as don
 ```
 cd PATH\to\waiton_todolist    
 docker build -t todolist:latest .   # build docker image and give tag todolist
-docker run -p 3000:3000 todolist:latest # run docker iamge in port 3000 
+docker run -p 3000:3000 todolist:latest # run docker image in port 3000 
 ```
 
 ### **Set Up Your Development Environment**
